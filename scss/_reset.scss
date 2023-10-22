@@ -1,0 +1,8 @@
+//Hoja para el reset
+
+/*Reseteo los valores seteados del navegador. Si no pongo esto, se me crea un margen por default que crea un marco blanco en la pagina*/
+
+*{
+    margin: 0;
+    padding: 0;
+}

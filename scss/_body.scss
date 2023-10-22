@@ -1,0 +1,274 @@
+/*Comienza lo que contiene body*/
+
+body {
+    background-color: #fbd1e0;
+
+    h1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        p {
+            font-family: Carena-Regular;
+            position: relative;
+            top: 10px;
+            padding: 20px;
+        }
+    }
+
+    .navdesktop {
+        /*Para que el nav quede pegado al tope de la página cuando se 
+    scrollea hacia abajo*/
+        position: sticky;
+        top: 0;
+        /*El z-index es para que al scrollear el nav quede siempre por 
+        encima de todo*/
+        z-index: 999;
+        /*Poner 100vw fue la única forma que encontré para que el body deje 
+        de quedar más chico que la página en distintas páginas*/
+        width: 100vw;
+
+        ul {
+            li {
+                a {
+/*Formato de botones para que sea clickeable todo el boton del navegador y no solo 
+el texto del ancla, tambien se agrega animacion de hover*/
+                    .navbutton {
+                        background-color: #300c0c;
+                        border: none;
+/*El borde ya esta dado por el parent list item*/
+                        font-family: Carena-Regular;
+                        color: white;
+                        text-align: center;
+                        font-size: 16px;
+                        opacity: 0.6;
+                        /*transition: 2s;*/
+/*Comento esta linea de CSS porque me interesaba agregarle una animacion al boton luego de hacerle click, pero no se por que la animacion sucedia solo
+cuando hacia click en Uploads y Requests. Cuando se hacia click en Introduction, Contact y Speedruns no surgia animacion asi que lo comento para que no se aplique pero no
+termine de entender por que con algunos si y otros no animaba*/
+                        display: inline-block;
+                        width: 95%;
+/*Le pogno esto para que el boton ocupe todo el espacio del ancla, de esta forma la propiedad del hover (cambio de opacidad en la letra) se dispara cuando el mousse
+pase por encima de cualquier parte del boton, y no solo por encima del texto. Lo dejo en 95% porque con 100% supera al nav*/
+                        cursor: pointer;
+/*Con esta linea, el mousse cambia a una manito cuando pasa por encima del boton para indicar que se puede hacer click ahi*/
+                        &:hover{
+/*Con esta parte agrega la opacidad que quiero cuando pase el mouse por el boton*/
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* Modifico dimensiones del navbar del tipo hamburguesa de como 
+    viene en Bootstrap, intente hacerlo solo llamando a "nav" pero no 
+    funciona dentro de "nav", tengo que si o si modificar la clase "navbar"*/
+    .navbar {
+        padding: 0;
+        border: solid;
+
+        div {
+            .navbar-toggler {
+                /*Le doy borde al boton*/
+                border: solid;
+                border-color: black;
+            }
+        }
+
+        /*Color del navbar*/
+        #navbar {
+            background-color: #300c0c;
+        }
+    }
+
+    nav {
+        position: sticky;
+        top: 0;
+
+        /*Uso display:flex para ubiar los botones y que ocupen todo el vw*/
+        ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            list-style: none;
+            padding: 0%;
+            border: 0;
+
+            li {
+                /*Formato de los botones para el nav*/
+                border-style: none;
+                font-family: Carena-Regular;
+                background-color: #300c0c;
+                /*La idea del 20% es para que con el total de los 5 elementos del navegador se me 
+ocupe la totalidad del ancho de la pagina*/
+                width: 100%;
+                /*Quiero que el texto en los botones este con justificacion en el centro*/
+                text-align: center;
+
+                a {
+                    button {
+                        /*Modifico boton*/
+                        margin: 7px;
+                    }
+                }
+            }
+        }
+    }
+
+    .collapse {
+        .p-4 {
+            /*Solo poniendo !important me hace efecto este cambio*/
+            padding: 5px !important;
+        }
+        div{
+            a{
+                .navbutton{
+                    background-color: #300c0c;
+                    border: none;
+                    font-family: Carena-Regular;
+                    color: white;
+                    text-align: center;
+                    font-size: 16px;
+                    opacity: 0.6;
+                    display: inline-block;
+                    width: 95%;
+                    cursor: pointer;
+                    &:hover{
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+/*Esta clase es el formato que va a tener MIENTRAS se abre el menu hamburguesa*/
+    .collapsing{
+        .p-4 {
+            /*Solo poniendo !important me hace efecto este cambio*/
+            padding: 5px !important;
+        }
+        div{
+            a{
+                .navbutton{
+                    background-color: #300c0c;
+                    border: none;
+                    font-family: Carena-Regular;
+                    color: white;
+                    text-align: center;
+                    font-size: 16px;
+                    opacity: 0.6;
+                    display: inline-block;
+                    width: 95%;
+                    cursor: pointer;
+                    &:hover{
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+
+    main {
+        .divimage {
+            display: flex;
+            flex-direction: row;
+            margin: 2%;
+
+            /*Posicionamiento de la imagen en Introduction, la intencion que tengo 
+es de ponerlo al costado y a su derecha el texto introductorio al sitio web*/
+            #introimage {
+                border-radius: 40px;
+                top: 200px;
+            }
+
+            #intro {
+                margin: 25px;
+                top: 200px;
+                text-align: justify;
+            }
+        }
+    }
+
+    /*Para darle un espacio entre el primer texto de Contacts con el navegador, y margen al texto*/
+    .socialmedia {
+        margin-left: 20px;
+
+        div {
+
+            /*Para ordenar los items "Instagram, YouTube, etc..."*/
+            #socialmedialist {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                list-style: none;
+            }
+        }
+
+        form {
+
+            /*Espaciado entre zonas de texto en formulario de Contacts*/
+            div {
+                padding-top: 20px;
+                padding-right: 20px;
+            }
+        }
+    }
+
+    /*Espaciado entre navegador y primer texto de Uploads*/
+    .uploads {
+        margin-left: 20px;
+
+        /*Espaciado entre video subido en Uploads y todo lo demas*/
+        .iframeuploads {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    /*Espaciado entre navegador y primer texto en Requests*/
+    .requests {
+        margin-left: 20px;
+
+        /*Espaciado entre texto y lista de solicitudes en Requests*/
+        p {
+            margin-bottom: 25px;
+        }
+
+        .iframediv {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            align-items: center;
+
+            iframe {
+                width: 90%;
+                margin-left: -20px;
+            }
+        }
+    }
+
+    .speedruns {
+        /*Espaciado entre navegador y primer texto en Speedruns*/
+        margin-left: 20px;
+
+        /*Espaciado entre parrafo y videos de Speedruns*/
+        p {
+            padding-bottom: 10px;
+        }
+
+        #noupload {
+            font-style: italic;
+            color: grey;
+        }
+    }
+}
+
+/*Esto es para que el color del boton que indique la pagina actual, haciendo override al color asignado a los textos del nav 
+en siguiente bloque de codigo*/
+#actual{
+    background-color: #492b2b;
+    border-radius: 5px;
+}
