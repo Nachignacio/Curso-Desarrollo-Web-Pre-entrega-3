@@ -6,7 +6,6 @@
   padding: 0;
 }
 
-/*Agrego la fuente descargada a las fuentes para la pagina*/
 @font-face {
   font-family: Carena-Regular;
   font-weight: bold;
@@ -286,6 +285,20 @@ en siguiente bloque de codigo*/
   .navbar {
     display: none;
   }
+}
+footer {
+  display: flex;
+  flex-direction: row;
+}
+footer .wppimage {
+  position: relative;
+  height: 10px;
+  width: 10px;
+}
+footer .igimage {
+  position: relative;
+  height: 10px;
+  width: 10px;
 }
 
 /*# sourceMappingURL=main.css.map */

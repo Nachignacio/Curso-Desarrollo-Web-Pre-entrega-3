@@ -2,7 +2,7 @@
 /*se importan los partials*/
 //importo los scss partials
 
-@import "reset";
-@import "fontssource";
+@import "global";
 @import "body";
 @import "mediaqueries";
+@import "./components/footer";
