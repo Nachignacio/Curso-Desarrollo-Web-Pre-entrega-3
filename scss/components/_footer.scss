@@ -1,14 +1,39 @@
 footer{
-    display: flex;
+    /*display: flex;
     flex-direction: row;
+    text-align: center;*/
+    position: fixed;
+    background-color: $colorfooter;
+    /*height: $tamaniofooter;*/
+    bottom: 0;
+    width: 100vw;
+    padding: $paddingfooter 0 $paddingfooter 0;
+    height: $tamaniofooter+2*$paddingfooter;
+
+    /*Hice el mixin footerin para que centre dentro del footer*/
+
     .wppimage{
-        position: relative;
-        height: 10px;
-        width: 10px;
+        @include footerin($tamaniofooter, 50vw, -$espaciadofooter);
+        img{
+            height: 100%;
+            width: 100%;
+        }
     }
     .igimage{
-        position: relative;
-        height: 10px;
-        width: 10px;
+        @include footerin($tamaniofooter, 50vw, $espaciadofooter);
+        img{
+            height: 100%;
+            width: 100%;
+        }
+    }
+    
+    /*Hice el mixin footerintexto para que centre dentro del footer*/
+
+    .wpptext{
+        @include footerintexto($tamaniotextofooter, 50vw, -$espaciadotextofooter);
+        font-weight: bold;
+    }
+    .igtext{
+        @include footerintexto($tamaniotextofooter, 50vw, 0.8*$espaciadotextofooter);
     }
 }

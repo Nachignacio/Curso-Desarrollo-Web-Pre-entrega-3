@@ -3,6 +3,8 @@
 //importo los scss partials
 
 @import "global";
+@import "./utilities/variables";
+@import "./utilities/mixins";
 @import "body";
 @import "mediaqueries";
 @import "./components/footer";

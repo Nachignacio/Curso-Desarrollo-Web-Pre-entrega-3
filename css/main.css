@@ -11,6 +11,7 @@
   font-weight: bold;
   src: url(../fonts/Carena-Regular.otf) format("opentype");
 }
+/*Variables del footer*/
 /*Comienza lo que contiene body*/
 body {
   background-color: #fbd1e0;
@@ -235,15 +236,36 @@ en siguiente bloque de codigo*/
 }
 
 @media screen and (max-width: 767px) {
-  .divimage {
-    display: block;
+  body main .divimage {
+    display: flex;
     flex-direction: column;
-    text-align: center;
+    align-items: center;
   }
-  .divimage #introimage {
+  body main .divimage #introimage {
     height: 50%;
     width: 50%;
     border-radius: 7%;
+  }
+  body footer {
+    height: 150px;
+  }
+  body footer .wppimage {
+    left: 100px;
+    top: 20px;
+  }
+  body footer .igimage {
+    left: 0;
+    /*Le doy el espacio de una imagen, mas el padding mas el espacio entre imagenes*/
+    top: 85px;
+  }
+  body footer .wpptext {
+    left: 360px;
+    width: 50vw;
+  }
+  body footer .igtext {
+    width: 50vw;
+    left: 0;
+    top: 95px;
   }
   .navdesktop {
     display: none;
@@ -287,18 +309,59 @@ en siguiente bloque de codigo*/
   }
 }
 footer {
-  display: flex;
+  /*display: flex;
   flex-direction: row;
+  text-align: center;*/
+  position: fixed;
+  background-color: rgb(71, 29, 29);
+  /*height: $tamaniofooter;*/
+  bottom: 0;
+  width: 100vw;
+  padding: 20px 0 20px 0;
+  height: 90px;
+  /*Hice el mixin footerin para que centre dentro del footer*/
+  /*Hice el mixin footerintexto para que centre dentro del footer*/
 }
 footer .wppimage {
-  position: relative;
-  height: 10px;
-  width: 10px;
+  display: inline-block;
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  left: 50vw;
+  transform: translateX(-75px);
+}
+footer .wppimage img {
+  height: 100%;
+  width: 100%;
 }
 footer .igimage {
-  position: relative;
-  height: 10px;
-  width: 10px;
+  display: inline-block;
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  left: 50vw;
+  transform: translateX(25px);
+}
+footer .igimage img {
+  height: 100%;
+  width: 100%;
+}
+footer .wpptext {
+  color: rgb(151, 79, 69);
+  display: inline;
+  position: absolute;
+  top: 35px;
+  left: 50vw;
+  transform: translateX(-250px);
+  font-weight: bold;
+}
+footer .igtext {
+  color: rgb(151, 79, 69);
+  display: inline;
+  position: absolute;
+  top: 35px;
+  left: 50vw;
+  transform: translateX(110px);
 }
 
 /*# sourceMappingURL=main.css.map */
