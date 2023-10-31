@@ -12,3 +12,10 @@
     font-weight: bold;
     src: url(../fonts/Carena-Regular.otf) format("opentype");
     }
+
+/*Esto es para que el color del boton que indique la pagina actual, haciendo override al color asignado a los textos del nav 
+en siguiente bloque de codigo*/
+#actual{
+    background-color: #492b2b;
+    border-radius: 5px;
+}

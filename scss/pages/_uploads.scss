@@ -1,0 +1,11 @@
+/*Espaciado entre navegador y primer texto de Uploads*/
+.uploads {
+    margin-left: 20px;
+
+    /*Espaciado entre video subido en Uploads y todo lo demas*/
+    .iframeuploads {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

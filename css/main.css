@@ -11,6 +11,13 @@
   font-weight: bold;
   src: url(../fonts/Carena-Regular.otf) format("opentype");
 }
+/*Esto es para que el color del boton que indique la pagina actual, haciendo override al color asignado a los textos del nav 
+en siguiente bloque de codigo*/
+#actual {
+  background-color: #492b2b;
+  border-radius: 5px;
+}
+
 /*Variables del footer*/
 /*Comienza lo que contiene body*/
 body {
@@ -19,9 +26,6 @@ body {
   viene en Bootstrap, intente hacerlo solo llamando a "nav" pero no 
   funciona dentro de "nav", tengo que si o si modificar la clase "navbar"*/
   /*Esta clase es el formato que va a tener MIENTRAS se abre el menu hamburguesa*/
-  /*Para darle un espacio entre el primer texto de Contacts con el navegador, y margen al texto*/
-  /*Espaciado entre navegador y primer texto de Uploads*/
-  /*Espaciado entre navegador y primer texto en Requests*/
 }
 body h1 {
   display: flex;
@@ -153,86 +157,87 @@ body .collapsing div a .navbutton {
 body .collapsing div a .navbutton:hover {
   opacity: 1;
 }
-body main .divimage {
+
+.divimage {
   display: flex;
   flex-direction: row;
   margin: 2%;
   /*Posicionamiento de la imagen en Introduction, la intencion que tengo 
   es de ponerlo al costado y a su derecha el texto introductorio al sitio web*/
 }
-body main .divimage #introimage {
+.divimage #introimage {
   border-radius: 40px;
   top: 200px;
 }
-body main .divimage #intro {
+.divimage #intro {
   margin: 25px;
   top: 200px;
   text-align: justify;
 }
-body .socialmedia {
+
+/*Para darle un espacio entre el primer texto de Contacts con el navegador, y margen al texto*/
+.socialmedia {
   margin-left: 20px;
 }
-body .socialmedia div {
+.socialmedia div {
   /*Para ordenar los items "Instagram, YouTube, etc..."*/
 }
-body .socialmedia div #socialmedialist {
+.socialmedia div #socialmedialist {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   list-style: none;
 }
-body .socialmedia form {
+.socialmedia form {
   /*Espaciado entre zonas de texto en formulario de Contacts*/
 }
-body .socialmedia form div {
+.socialmedia form div {
   padding-top: 20px;
   padding-right: 20px;
 }
-body .uploads {
-  margin-left: 20px;
-  /*Espaciado entre video subido en Uploads y todo lo demas*/
-}
-body .uploads .iframeuploads {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-body .requests {
+
+/*Espaciado entre navegador y primer texto en Requests*/
+.requests {
   margin-left: 20px;
   /*Espaciado entre texto y lista de solicitudes en Requests*/
 }
-body .requests p {
+.requests p {
   margin-bottom: 25px;
 }
-body .requests .iframediv {
+.requests .iframediv {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   align-items: center;
 }
-body .requests .iframediv iframe {
+.requests .iframediv iframe {
   width: 90%;
   margin-left: -20px;
 }
-body .speedruns {
+
+.speedruns {
   /*Espaciado entre navegador y primer texto en Speedruns*/
   margin-left: 20px;
   /*Espaciado entre parrafo y videos de Speedruns*/
 }
-body .speedruns p {
+.speedruns p {
   padding-bottom: 10px;
 }
-body .speedruns #noupload {
+.speedruns #noupload {
   font-style: italic;
   color: grey;
 }
 
-/*Esto es para que el color del boton que indique la pagina actual, haciendo override al color asignado a los textos del nav 
-en siguiente bloque de codigo*/
-#actual {
-  background-color: #492b2b;
-  border-radius: 5px;
+/*Espaciado entre navegador y primer texto de Uploads*/
+.uploads {
+  margin-left: 20px;
+  /*Espaciado entre video subido en Uploads y todo lo demas*/
+}
+.uploads .iframeuploads {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 @media screen and (max-width: 767px) {
