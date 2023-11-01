@@ -12,28 +12,15 @@ footer{
 
     /*Hice el mixin footerin para que centre dentro del footer*/
 
-    .wppimage{
-        @include footerin($tamaniofooter, 50vw, -$espaciadofooter);
-        img{
-            height: 100%;
-            width: 100%;
-        }
-    }
-    .igimage{
-        @include footerin($tamaniofooter, 50vw, $espaciadofooter);
-        img{
-            height: 100%;
-            width: 100%;
-        }
-    }
+    
     
     /*Hice el mixin footerintexto para que centre dentro del footer*/
 
-    .wpptext{
-        @include footerintexto($tamaniotextofooter, 50vw, -$espaciadotextofooter);
-        font-weight: bold;
+        .wpptext{
+            @include footerintexto($tamaniotextofooter, 50vw, -$espaciadotextofooter);
+            font-weight: bold;
+        }
+        .igtext{
+            @include footerintexto($tamaniotextofooter, 50vw, 0.8*$espaciadotextofooter);
+        }
     }
-    .igtext{
-        @include footerintexto($tamaniotextofooter, 50vw, 0.8*$espaciadotextofooter);
-    }
-}

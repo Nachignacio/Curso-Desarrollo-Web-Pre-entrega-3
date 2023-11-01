@@ -14,31 +14,42 @@
 /*Esto es para que el color del boton que indique la pagina actual, haciendo override al color asignado a los textos del nav 
 en siguiente bloque de codigo*/
 #actual {
-  background-color: #492b2b;
+  background-color: #5c3434;
   border-radius: 5px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 /*Variables del footer*/
-/*Comienza lo que contiene body*/
-body {
-  background-color: #fbd1e0;
-  /* Modifico dimensiones del navbar del tipo hamburguesa de como 
-  viene en Bootstrap, intente hacerlo solo llamando a "nav" pero no 
-  funciona dentro de "nav", tengo que si o si modificar la clase "navbar"*/
-  /*Esta clase es el formato que va a tener MIENTRAS se abre el menu hamburguesa*/
+.wppimage {
+  /*hf: altura foto, left: ubicacion desde la izquierda, space: espaciado desde el centro*/
+  display: inline-block;
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  left: 50vw;
+  transform: translateX(-75px);
 }
-body h1 {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+.wppimage img {
+  height: 100%;
+  width: 100%;
 }
-body h1 p {
-  font-family: Carena-Regular;
-  position: relative;
-  top: 10px;
-  padding: 20px;
+
+.igimage {
+  /*hf: altura foto, left: ubicacion desde la izquierda, space: espaciado desde el centro*/
+  display: inline-block;
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  left: 50vw;
+  transform: translateX(25px);
 }
-body .navdesktop {
+.igimage img {
+  height: 100%;
+  width: 100%;
+}
+
+.navdesktop {
   /*Para que el nav quede pegado al tope de la página cuando se 
   scrollea hacia abajo*/
   position: sticky;
@@ -50,11 +61,11 @@ body .navdesktop {
   de quedar más chico que la página en distintas páginas*/
   width: 100vw;
 }
-body .navdesktop ul li a {
+.navdesktop ul li a {
   /*Formato de botones para que sea clickeable todo el boton del navegador y no solo 
   el texto del ancla, tambien se agrega animacion de hover*/
 }
-body .navdesktop ul li a .navbutton {
+.navdesktop ul li a .navbutton {
   background-color: #300c0c;
   border: none;
   /*El borde ya esta dado por el parent list item*/
@@ -74,29 +85,34 @@ body .navdesktop ul li a .navbutton {
   cursor: pointer;
   /*Con esta linea, el mousse cambia a una manito cuando pasa por encima del boton para indicar que se puede hacer click ahi*/
 }
-body .navdesktop ul li a .navbutton:hover {
+.navdesktop ul li a .navbutton:hover {
   /*Con esta parte agrega la opacidad que quiero cuando pase el mouse por el boton*/
   opacity: 1;
 }
-body .navbar {
+
+/* Modifico dimensiones del navbar del tipo hamburguesa de como 
+viene en Bootstrap, intente hacerlo solo llamando a "nav" pero no 
+funciona dentro de "nav", tengo que si o si modificar la clase "navbar"*/
+.navbar {
   padding: 0;
   border: solid;
   /*Color del navbar*/
 }
-body .navbar div .navbar-toggler {
+.navbar div .navbar-toggler {
   /*Le doy borde al boton*/
   border: solid;
   border-color: black;
 }
-body .navbar #navbar {
+.navbar #navbar {
   background-color: #300c0c;
 }
-body nav {
+
+nav {
   position: sticky;
   top: 0;
   /*Uso display:flex para ubiar los botones y que ocupen todo el vw*/
 }
-body nav ul {
+nav ul {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -104,7 +120,7 @@ body nav ul {
   padding: 0%;
   border: 0;
 }
-body nav ul li {
+nav ul li {
   /*Formato de los botones para el nav*/
   border-style: none;
   font-family: Carena-Regular;
@@ -115,15 +131,16 @@ body nav ul li {
   /*Quiero que el texto en los botones este con justificacion en el centro*/
   text-align: center;
 }
-body nav ul li a button {
+nav ul li a button {
   /*Modifico boton*/
   margin: 7px;
 }
-body .collapse .p-4 {
+
+.collapse .p-4 {
   /*Solo poniendo !important me hace efecto este cambio*/
   padding: 5px !important;
 }
-body .collapse div a .navbutton {
+.collapse div a .navbutton {
   background-color: #300c0c;
   border: none;
   font-family: Carena-Regular;
@@ -135,14 +152,16 @@ body .collapse div a .navbutton {
   width: 95%;
   cursor: pointer;
 }
-body .collapse div a .navbutton:hover {
+.collapse div a .navbutton:hover {
   opacity: 1;
 }
-body .collapsing .p-4 {
+
+/*Esta clase es el formato que va a tener MIENTRAS se abre el menu hamburguesa*/
+.collapsing .p-4 {
   /*Solo poniendo !important me hace efecto este cambio*/
   padding: 5px !important;
 }
-body .collapsing div a .navbutton {
+.collapsing div a .navbutton {
   background-color: #300c0c;
   border: none;
   font-family: Carena-Regular;
@@ -154,8 +173,66 @@ body .collapsing div a .navbutton {
   width: 95%;
   cursor: pointer;
 }
-body .collapsing div a .navbutton:hover {
+.collapsing div a .navbutton:hover {
   opacity: 1;
+}
+
+/*Código importado desde el GitHub de Ian Lunn para agregar animaciones en botones*/
+/* Underline From Center */
+.hvr-underline-from-center {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+}
+
+.hvr-underline-from-center:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 51%;
+  right: 51%;
+  bottom: 0;
+  background: #7c3e25;
+  height: 4px;
+  -webkit-transition-property: left, right;
+  transition-property: left, right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-underline-from-center:hover:before,
+.hvr-underline-from-center:focus:before,
+.hvr-underline-from-center:active:before {
+  left: 0;
+  right: 0;
+}
+
+/*Termina código importado*/
+/*Comienza lo que contiene body*/
+body {
+  background-image: linear-gradient(#b48a99 20%, rgba(48, 12, 12, 0.8784313725) 80%);
+  background-repeat: no-repeat;
+  /*Es necesario agregar este estilo para que el gradiente se me extienda por toda la página*/
+  background-attachment: fixed;
+  height: 2500px; /*Esta dimensión del body es para hacer prueba del nav en sticky*/
+}
+body h1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 0;
+}
+body h1 p {
+  font-family: Carena-Regular;
+  position: relative;
+  top: 10px;
+  padding: 20px;
 }
 
 .divimage {
@@ -173,6 +250,7 @@ body .collapsing div a .navbutton:hover {
   margin: 25px;
   top: 200px;
   text-align: justify;
+  font-weight: 500;
 }
 
 /*Para darle un espacio entre el primer texto de Contacts con el navegador, y margen al texto*/
@@ -226,7 +304,7 @@ body .collapsing div a .navbutton:hover {
 }
 .speedruns #noupload {
   font-style: italic;
-  color: grey;
+  color: rgb(27, 23, 23);
 }
 
 /*Espaciado entre navegador y primer texto de Uploads*/
@@ -238,6 +316,56 @@ body .collapsing div a .navbutton:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.uploads .iframeuploads h2 {
+  margin: 20px;
+  font-size: x-large;
+  text-decoration: underline;
+}
+.uploads .iframeuploads label img {
+  /*Tenia la intencion de usar la funcion visibility pero por alguna razon no funciona con la imagen
+  pero con opacity si puedo esconder la imagen*/
+  opacity: 1;
+  transition: 0.2s;
+  /*Codigo importado usando una pagina de box generator*/
+  box-shadow: 30px 30px 50px 1px rgba(0, 0, 0, 0.64);
+  -webkit-box-shadow: 30px 30px 50px 1px rgba(0, 0, 0, 0.64);
+  -moz-box-shadow: 30px 30px 50px 1px rgba(0, 0, 0, 0.64);
+  /*Fin de codigo importado*/
+  cursor: pointer;
+}
+.uploads .iframeuploads label img:hover {
+  transform: skew(5deg, 1deg) scale(1.008);
+  /*Codigo importado usando una pagina de box generator*/
+  box-shadow: 40px 40px 100px 15px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 40px 40px 100px 15px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 40px 40px 100px 15px rgba(0, 0, 0, 0);
+  /*Fin de codigo importado*/
+}
+.uploads .iframeuploads .labelultimocapitulo {
+  height: 315px;
+  width: 560px;
+}
+.uploads .iframeuploads .labelultimocapitulo img {
+  visibility: visible;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.uploads .iframeuploads iframe {
+  visibility: hidden;
+}
+.uploads .iframeuploads #ultimocapitulo {
+  display: none;
+}
+.uploads .iframeuploads #ultimocapitulo:checked ~ iframe {
+  visibility: visible;
+  position: absolute;
+  /*Ubicación para que se ponga justo donde antes estaba la imagen*/
+  top: 265.8px;
+}
+.uploads .iframeuploads #ultimocapitulo:checked ~ .labelultimocapitulo {
+  opacity: 0;
 }
 
 @media screen and (max-width: 767px) {
@@ -278,7 +406,10 @@ body .collapsing div a .navbutton:hover {
   .navbar {
     position: sticky;
     top: 0px;
-    margin-bottom: 2.5%;
+  }
+  .navbar label {
+    width: 100vw;
+    z-index: 999;
   }
   .uploads .iframeuploads iframe {
     width: 72vw;
@@ -295,7 +426,6 @@ body .collapsing div a .navbutton:hover {
   .navbar {
     position: sticky;
     top: 0px;
-    margin-bottom: 2.5%;
   }
   .show {
     position: sticky;
@@ -327,31 +457,8 @@ footer {
   /*Hice el mixin footerin para que centre dentro del footer*/
   /*Hice el mixin footerintexto para que centre dentro del footer*/
 }
-footer .wppimage {
-  display: inline-block;
-  position: absolute;
-  height: 50px;
-  width: 50px;
-  left: 50vw;
-  transform: translateX(-75px);
-}
-footer .wppimage img {
-  height: 100%;
-  width: 100%;
-}
-footer .igimage {
-  display: inline-block;
-  position: absolute;
-  height: 50px;
-  width: 50px;
-  left: 50vw;
-  transform: translateX(25px);
-}
-footer .igimage img {
-  height: 100%;
-  width: 100%;
-}
 footer .wpptext {
+  /*hf: altura texto, left: ubicacion desde la izquierda, space: espaciado desde el centro*/
   color: rgb(151, 79, 69);
   display: inline;
   position: absolute;
@@ -361,6 +468,7 @@ footer .wpptext {
   font-weight: bold;
 }
 footer .igtext {
+  /*hf: altura texto, left: ubicacion desde la izquierda, space: espaciado desde el centro*/
   color: rgb(151, 79, 69);
   display: inline;
   position: absolute;

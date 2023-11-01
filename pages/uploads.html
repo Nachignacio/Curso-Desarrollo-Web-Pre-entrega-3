@@ -21,34 +21,34 @@
     <nav class="navdesktop"> <!--Empiezo a configurar el navegador de la pagina-->
         <ul>
             <li>
-                <a href="./requests.html">
+                <a href="./requests.html" class="hvr-underline-from-center">
                     <button class="navbutton">
                         REQUESTS
                     </button>
                 </a>
             </li>
             <li>
-                <a href="./uploads.html">
-                    <button class="navbutton" id="actual"> <!--Le agrego el id "actual" para usarlo en css y sombrearlo en negro para indicar en que pagina se encuentra el usuario-->
+                <a href="./uploads.html" class="hvr-underline-from-center">
+                    <button class="navbutton" id="actual" class="hvr-underline-from-center"> <!--Le agrego el id "actual" para usarlo en css y sombrearlo en negro para indicar en que pagina se encuentra el usuario-->
                         UPLOADS
                     </button>
                 </a>
             </li>
             <li>
-                <a href="../index.html">
-                    <button class="navbutton">
+                <a href="../index.html" class="hvr-underline-from-center">
+                    <button class="navbutton" >
                         INTRODUCTION
                     </button>                        
                 </a>
             </li>
             <li>
-                <a href="./speedruns.html">
+                <a href="./speedruns.html" class="hvr-underline-from-center">
                     <button class="navbutton">
                         SPEEDRUNS
                     </button></a>
             </li>
             <li>
-                <a href="./contact.html">
+                <a href="./contact.html" class="hvr-underline-from-center">
                     <button class="navbutton">
                         CONTACT
                     </button>
@@ -56,36 +56,6 @@
             </li>
         </ul>
     </nav>
-    <div class="collapse" id="navbarToggleExternalContent" data-bs-theme="dark">
-        <div class="bg-danger-subtle p-4">
-        <a href="./requests.html">
-            <button class="navbutton">
-                REQUESTS
-            </button>
-        </a>
-        <a href="./uploads.html">
-            <button class="navbutton" id="actual">
-            <!--Le agrego el id "actual" para usarlo en css y sombrearlo en negro para indicar en que pagina se encuentra el usuario-->
-                UPLOADS
-            </button>
-        </a>
-        <a href="../index.html"> 
-            <button class="navbutton">
-                INTRODUCTION
-            </button>
-        </a>
-        <a href="./speedruns.html">
-            <button class="navbutton">
-                SPEEDRUNS
-            </button>
-        </a>
-        <a href="./contact.html">
-            <button class="navbutton">
-                CONTACT
-            </button>
-        </a>
-        </div>
-    </div>
     <nav class="navbar navbar-dark bg-danger-subtle">
         <div class="container-fluid" id="navbar">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -93,15 +63,53 @@
         </button>
         </div>
     </nav>
+    <div class="collapse" id="navbarToggleExternalContent" data-bs-theme="dark">
+        <div class="bg-danger-subtle p-4">
+            <a href="./requests.html">
+                <button class="navbutton">
+                    REQUESTS
+                </button>
+            </a>
+            <a href="./uploads.html">
+                <button class="navbutton" id="actual">
+                <!--Le agrego el id "actual" para usarlo en css y sombrearlo en negro para indicar en que pagina se encuentra el usuario-->
+                    UPLOADS
+                </button>
+            </a>
+            <a href="../index.html"> 
+                <button class="navbutton">
+                    INTRODUCTION
+                </button>
+            </a>
+            <a href="./speedruns.html">
+                <button class="navbutton">
+                    SPEEDRUNS
+                </button>
+            </a>
+            <a href="./contact.html">
+                <button class="navbutton">
+                    CONTACT
+                </button>
+            </a>
+        </div>
+    </div>
     <main class="uploads"> <!-- Seccion para ir dejando videos subidos con los covers, eventualmene me gustaria agregarlo filtros para ordenar los videos, en un
     futuro en el que tenga muchos videos-->
         <p>
             Here are all the videos uploaded so far:
         </p>
         <div class="iframeuploads">
+            <h2>
+                Último Capítulo - Mery Granados
+            </h2>
+            <input type="checkbox" id="ultimocapitulo">
+            <label for="ultimocapitulo" class="labelultimocapitulo">
+                <img src="../images/ultimocapitulo.jpg" id="phultimocapitulo">
+            </label>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/r6rkTG79kc4?si=WHcIoj3LkyhjSD-3" 
             title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; 
-            web-share" allowfullscreen></iframe>
+            web-share" allowfullscreen>
+            </iframe>
         </div>
     </main>
     <footer>
